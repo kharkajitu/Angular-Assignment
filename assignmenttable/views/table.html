@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Assignment on Table</title>
+    
+    </head>   
+        
+    <body ng-app="app" ng-controller="appCtrl">        
+        
+        <h1> Employee Information</h1>
+        
+        <form>
+            <div>
+                First Name:<br>
+                <input type="text"  ng-model="formModel.firstName"><br>
+                Last Name:<br>
+                <input type="text"  ng-model="formModel.lastName"><br>
+                Rate per hour:<br>
+                <input type="text" ng-model="formModel.hourlyPay"><br>
+                Total Hour:<br>
+                <input type="text" ng-model="formModel.totalHour">
+            </div>  
+        </form>
+        
+        <br>
+        <br>
+        
+        <table style="color:red" "width:60%" border="3" >
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>GrossIncome</th>
+                    <th>Tax</th>
+                    <th>NetIncome</th>
+                    
+                </tr>
+                <tr>
+                    <td>{{formModel.firstName}}</td>
+                    <td>{{formModel.lastName}}</td>
+                    <td>{{grossIncome()}}</td>
+                    <td>{{tax()}}</td>
+                    <td>{{netIncome()}}</td>
+                </tr>
+                
+        
+        </table>
+        
+            
+    
+       
+         <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        
+        <script type="text/javascript" src="/assignmenttable/scripts/app.js"></script>
+        
+        <script type="text/javascript" src="/assignmenttable/scripts/controllers/appCtrl.js"></script>
+         
+    </body>
+    
+</html>

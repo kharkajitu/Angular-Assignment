@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title> Angular App </title> 
+    
+    </head>
+           
+    
+    <body ng-app="app">
+        
+        <h1> First Angular App </h1>
+        <div ng-controller="appCtrl">
+            
+            one way databinding={{::random}} {{::firstName}} {{::lastName}}<br>          
+            
+            two way databinding= {{random}} {{firstName}} {{lastName}}<br>  
+            
+            <input type="text" ng-model="random">
+            
+            <button ng-click="sampleSubmit()">Sbumit</button>
+            
+    
+    
+        <div>
+            
+            <tr> First Name </tr>
+                <td> <input type="text" ng-model="formModel.firstName"></td><br>
+            
+            <tr> Last Name </tr>
+                <td> <input type="text" ng-model="formModel.lastName"></td><br>
+         
+            <tr> Phone </tr>
+                <td> <input type="text" ng-model="formModel.phone"></td>
+        
+        
+        </div>
+        
+        </div>
+        
+       
+        <!--JS Dependencies-->
+        
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/angular_project/scripts/app.js"></script>
+        <script type="text/javascript" src="/angular_project/scripts/controllers/appCtrl.js"></script>
+                 
+    
+    </body>    
+
+</html>
